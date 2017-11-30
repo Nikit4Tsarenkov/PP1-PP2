@@ -1,0 +1,838 @@
+PP1
+/*1<A> #include<iostream>
+using namespace std;
+int main()
+{
+int x, y;
+cout << "Input x:" ;cin >> x;
+y = x*(x*(x*(2 * x - 3) + 4) - 5) + 6;
+cout << y << endl;
+system("pause");
+return 0;
+}*/
+
+/*2 #include<iostream>
+using namespace std;
+int main()
+{
+int a,k,t;
+cout << "Input a:"; cin >> a;
+t = a*a; // t=a^2
+k = t*t; // k=a^4
+a = k*k; // a^8
+cout << "a^8="; cout << a << endl;
+a = a*t;
+cout << "a^10="; cout << a << endl;
+system("pause");
+return 0;
+}
+*/
+
+/*3 #include<iostream>
+using namespace std;
+int main()
+{
+int N;
+cout << "Input three-digit number:"; cin >> N;
+if (N > 99 && N < 1000){
+cout << "First digit is:"; cout << N / 100 << endl;
+cout << "Second digit is:"; cout << N / 10 % 10 << endl;
+cout << "Third digit is:"; cout << N % 100 % 10 << endl;
+}
+else {
+cout << "Error";
+}
+system("pause");
+return 0;
+}
+*/
+
+/*4 #include<iostream>
+using namespace std;
+int main()
+{
+int N,a,b,c,d,sum;
+cout << "Input four-digit number:"; cin >> N;
+if (N > 999 && N < 10000)
+{
+a = N / 1000;
+b = N / 100 % 10;
+c = N / 10 % 10;
+d = N % 10;
+sum = a + b + c + d;
+cout << "Sum of digits are:"; cout << sum << endl;
+}
+else{
+cout << "Error";
+}
+system("pause");
+return 0;
+}
+*/
+
+/*5
+#include<iostream>
+using namespace std;
+int main()
+{
+int i,b,N;
+cout<<"Input six-digit number:"; cin>> N;
+if(N>99999 && N<1000000)
+{
+b=N/100%10;
+i=N/1000;
+cout << "thousands:"<<i<<endl;
+cout<<"hundreds: "<<b<<endl;
+}
+else
+cout<<"Error"<<endl;
+system("pause");
+return 0;
+}
+*/
+
+/*6
+#include<iostream>
+using namespace std;
+int main()
+{
+int N,a,b,c,d,e;
+cout<<"Input five-digit number:";
+cin>>N;
+if(N>9999 && N<100000)
+{
+a=N%10;
+b=N/10%10;
+c=N/100%10;
+d=N/1000%10;
+e=N/10000;
+cout<<"number M="; cout<<a<<b<<c<<d<<e<< endl;
+}
+else
+cout<<"Error";
+system("pause");
+return 0;
+}
+//A7
+#include<iostream>
+using namespace std;
+int main()
+{
+double number1, part1,part2 , numberResul;
+cout << "Input number:"; cin >> number1;
+	
+number1 *= 1000;
+part1 =number1/1000;
+part2 =(int) number1 % 1000;
+numberResul = part2 + part1/1000;
+cout << numberResul << endl;
+system("pause");
+return 0;
+}
+//A8
+#include<iostream>
+using namespace std;
+int main()
+{
+int m, n;
+cout << "Input m "; cin >> m;
+cout << "Input n "; cin >> n;
+m = n + m;
+n = m - n;
+m = m - n;
+	
+cout << "m = " << m <<endl;
+cout << "n = " << n << endl;
+system("pause");
+return 0;
+}
+*/
+
+//A9
+#include<iostream>
+using namespace std;
+
+int main()
+{	
+setlocale(LC_ALL, "russian"); 
+int m, n,helpNum,highest,lowest;
+double division;
+	
+cout << "Âåäèòå m "; cin >> m;
+cout << "Ââåäèòå n "; cin >> n;
+division =(double) m / n;
+helpNum = division * 10;
+	
+highest = helpNum % 10;
+lowest = helpNum / 10 % 10;
+
+cout << "m/n= "<<division << endl;
+cout <<"Ñòàðøàÿ öèôðà äðîáíîé ÷àñòè "<< highest << endl;
+cout << "Ìëàäøàÿ öèôðà öåëîé ÷àñòè "<<lowest << endl;
+
+	
+
+
+
+system("pause");
+return 0;
+}
+/*
+
+
+PP2
+//A1
+# include <iostream> 
+# include <cmath> 
+using namespace std;
+
+int main()
+{
+int i = 0;
+double eps, x = 1.0;
+cout << "Enter the eps: "; cin >> eps;
+while ((sin(x) / x <= 1 - eps) || (sin(x) / x >= 1 + eps))
+{
+x /= 2;
+if ((sin(x) / x >= 1 - eps) && (sin(x) / x <= 1 + eps))
+{
+cout << "lim " << i << endl;
+}
+		
+}
+	
+system("pause");
+return 0;
+}
+
+//A2
+# include <iostream>
+# include <cmath>
+using namespace std;
+int main()
+{
+int i;
+double eps, x;
+cout << "Enter the eps: "; cin >> eps;
+x = 0;
+while ((pow((1 + 1.0 / x), x) < exp(1) - eps) || (pow((1 + 1.0 / x), x) > exp(1) + eps))
+{
+x++;
+}
+cout << "The number " << x << endl;
+system("pause");
+return 0;
+}
+
+//A3
+# include <iostream>
+using namespace std;
+
+int main()
+{
+int road, restTime, hour, min, hour1, min1;
+cout << "Enter start hour and min: "; cin >> hour; cin >> min;
+
+cout << "Enter finish hour and min: "; cin >> hour1; cin >> min1;
+
+cout << "Enter time to road: "; cin >> road;
+
+cout << "Enter the restTime: "; cin >> restTime;
+
+cout << "time is " << hour << " hour " << min << " minuts" << endl;
+
+if (hour + road / 60 <= hour1 && min + road % 60 < 60)
+{
+min = min + road;
+if (min > 59) 
+{
+hour = hour + min / 60;
+min = min % 60;
+}
+
+
+
+min = min + restTime;
+if (min > 59) 
+{
+hour = hour + min / 60;
+min = min % 60;
+}
+cout << "time is " << hour << " hour " << min << " minuts" << endl;
+
+}
+if (road != 0)
+{
+while (hour + road / 60 <= hour1 && (min + road % 60) % 60 < 60) 
+{
+min = min + road;
+if (min > 59) 
+{ 
+hour = hour + min / 60; min = min % 60; 
+}
+
+if (hour == hour1 && min > min1) break;
+min = min + restTime;
+
+if (min > 59)
+{
+hour = hour + min / 60; min = min % 60;
+}
+
+if (hour == hour1 && min == min1) break;
+
+cout << "time is " << hour << " hour " << min << " minuts" << endl;
+
+
+		}
+system("pause");
+return 0;
+
+}
+
+//A4
+# include <iostream>
+# include <cmath>
+using namespace std;
+
+int main()
+{
+double pi, testpi, eps;
+int i;
+cout << "Enter the number of pi: "; cin >> pi;
+cout << "Enter the epsilon: "; cin >> eps;
+testpi = 3;
+for (i = 1;; i++) 
+{
+if (i % 2 != 0)
+
+{ 
+testpi = testpi + (4.0 / ((i * 2)*(i * 2 + 1)*(i * 2 + 2))); 
+}
+else
+{
+testpi = testpi - (4.0 / ((i * 2)*(i * 2 + 1)*(i * 2 + 2))); 
+}
+if (pi > testpi - eps && pi<testpi + eps) 
+{
+cout << "first process make " << i << " steps" << endl; break;
+}
+}
+testpi = 0;
+for (i = 0;; i++) 
+{
+if (i % 2 == 0)
+{ 
+testpi = testpi + (4.0 / (i * 2 + 1)); 
+
+}
+else 
+{ testpi = testpi - (4.0 / (i * 2 + 1)); }
+if (pi > testpi - eps && pi<testpi + eps)
+{
+cout << "Second process make " << i + 1 << " steps" << endl; break;
+}
+}
+testpi = 0;
+for (i = 1;; i++) 
+{
+testpi = testpi + (6.0 / (i * i));
+if (pi > sqrt(testpi) - eps && pi<sqrt(testpi) + eps)
+{
+cout << "Therd process make " << i << " steps" << endl; break;
+}
+}
+system("pause");
+return 0;
+}
+
+//A5
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int number = 1, count = 0, count1 = 0, previousNmb, count2 = 0, count3 = 0;/*count=kol-vo elementov ;	
+																					count1=sosednyiya para ;
+																					count2=vozrastaet ;
+																					count3=menyaetsya znak;*/
+	cout<<"input number"<<endl;
+	cin >> previousNmb;
+
+	while (number != 0)
+	{
+		
+		cin >> number;
+		if (number >= previousNmb)
+			count2++;
+
+		if (number == previousNmb)
+			count1++;
+
+		if ((number > 0 && previousNmb < 0) || (number < 0 && previousNmb>0))
+			count3++;
+		previousNmb = number;
+		count++;
+
+	}
+	
+	cout << "The seauence has " << count1 << " pair of neighboring elements \n";
+
+	cout << "Sign changes " << count3 << " times \n";
+
+	if (count2+1 == count)
+		cout << "The sequence increases \n";
+	else  cout << "The sequence decreases \n";
+	
+	
+	system("pause");
+	return 0;
+}
+
+//A6
+
+# include <iostream> 
+# include <cmath> 
+using namespace std;
+
+int main() {
+	unsigned int number, newnumber = 0;
+	int i = 0;
+	cout << "Enter the number: "; cin >> number;
+	while (number != 0) 
+	{
+		if (number % 10 != 3 && number % 10 != 7)
+		{
+			i++;
+			newnumber += (number % 10)*pow(10, i);
+		}
+		number /= 10;
+	}
+	cout << "New number: " << newnumber / 10 << endl;
+	system("pause");
+	return 0;
+}
+
+//A7
+
+#include <iostream> 
+#include <iomanip>
+using namespace std;
+
+int main()
+
+{
+	int max=0, min, judge, mark,i,amount=0;	double  average;
+	cout << "Input a number of judges "; cin >> judge;
+
+	for (i = 0; i < judge; i++)
+	{
+		cout << "Input " << i + 1 << " mark "; cin >> mark;
+
+		if (i == 0)
+			min = mark;
+
+		if (mark < min)
+			min = mark;
+
+		if (mark > max)
+			max = mark;
+
+		amount = amount + mark;
+		
+	}
+	cout << "max= " << max << endl;
+	cout << "min= " << min << endl;
+	average = (double)(amount - max - min) / (judge - 2);
+	cout << "average = " <<setprecision(3)<< average << endl;
+	system("pause");
+	return 0;
+
+}
+
+//A8
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+int main()
+{
+	const int n = 10;
+	int i,j,k=0;
+	int a[2 * n], c[n];
+	int b[n];
+	int *pa = a, *pb = b, *pc=c;
+	srand(time(0));
+	for (i = 0; i < 2 * n; i++)
+	{
+		a[i] = rand() % 100;
+		cout << a[i] << ' ';
+	}
+	cout << endl;
+	for (i = 0; i < 2 * n; i++)
+	{
+		if (i % 2 != 0) pb[i/2]=pa[i];
+	}
+	for (i = 0; i < n;i++)
+		cout << b[i] << ' ';
+
+
+	for (i = 0; i < 2 * n; i++)
+	{
+
+		if (i % 2 == 0)
+
+		{
+			a[k++] = a[i];
+		}
+	}
+
+		
+		
+
+
+	cout << endl;
+	for (i = 0; i <  n; i++)
+	{
+		
+		cout << a[i] << ' ';
+	}
+	
+	
+	system("pause");
+	return 0;
+}
+
+//B1
+
+//B2
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+ 
+int main()
+{
+	const int n = 10;
+	int a[n],i,sum=0,average,k=0;
+	srand(unsigned(time(0)));
+	for (i = 0; i < n; i++)
+		a[i] = rand() % 10+1 ;
+	cout << "Sourse array: ";
+	for (i = 0; i < n; i++) 
+	{
+		sum += a[i];
+		cout << a[i]<<' ';
+	}
+	average = sum / n; cout <<"\nAverage = " <<average<<endl;
+	for (i = 0; i < n; i++)
+	{
+		a[k++] = a[i] - average;
+		 cout << a[i] << ' ';
+	}
+
+	
+
+	system("pause");
+	return 0;
+	
+
+
+
+
+}
+
+//B3
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(unsigned(time(0)));
+	const int n = 10; int a[n];
+	 int l = n;
+	int i, k=0,j=0,imin;
+	cout << "Sourse array: ";
+	for (i = 0; i < n; i++)
+	{
+		a[i] = rand() % 10 + 1;
+		cout << a[i] << ' ';
+	}
+	cout << endl;
+	for (i = 0; i < n/2; i++)
+	{
+		int tmp = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = tmp;
+	}
+
+	for (i = 0; i < n;i++)
+		cout << a[i] << ' ';
+	
+	system("pause");
+	return 0;
+}
+
+//B4
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(unsigned(time(0)));
+	const int n = 10; int a[n];
+	 int l = n;
+	int i, k=0,j=0,imin;
+	cout << "Sourse array: ";
+	for (i = 0; i < n; i++)
+	{
+		a[i] = rand() % 10 + 1;
+		cout << a[i] << ' ';
+	}
+	cout << endl;
+	for (i = 0; i < n/2; i++)
+	{
+		int tmp = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = tmp;
+	}
+
+	for (i = 0; i < n;i++)
+		cout << a[i] << ' ';
+	
+	system("pause");
+	return 0;
+}
+
+//B5
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(unsigned(time(0)));
+	const int n = 10;
+	int a[n];
+	int i,sum=0,j;
+	double average;
+
+
+	for (i = 0; i < n; i++)
+	{
+		a[i] = rand() % 20 + 1;
+	cout << a[i] << ' ';
+	}
+	cout << endl;
+	int max = a[0], min = a[0];
+	int numMin, numMax;
+	for (i = 0; i < n; i++)
+	{
+		if (a[i] >= max)
+		{
+			max = a[i];
+			 numMax = i;
+		}
+
+		if (a[i] <= min)
+		{
+			min = a[i];
+			 numMin = i;
+		}
+	}
+	
+	cout << "Index Min = "<< numMin << "\n"<<"Index Max = " << numMax << endl;
+	
+	if (numMin < numMax)
+	{
+		for (j=numMin + 1; j < numMax; j++)
+			sum += a[j];
+		average = (double)sum / (numMax - numMin-1);
+	}
+	if (numMin > numMax)
+	{
+		for (j=numMax + 1; j < numMin; j++)
+			sum += a[j];
+		average =(double) sum / (numMin - numMax-1);
+	}
+
+	if (abs(numMin - numMax)==1)
+		average = 0;
+	
+	cout << "Average between " << a[numMin] << " and " << a[numMax] << " = " << average << endl;
+
+	
+
+	system("pause");
+	return 0;
+}
+
+//B6
+#include <iostream> 
+#include <string> 
+using namespace std;
+int main() {
+	cout << " Text: ";
+
+	string text = "";
+
+	char ch = 0;
+
+	for (int n = 0; ch != '.'; n++)
+
+	{
+		cin.get(ch);
+		text += ch;
+	}
+
+	int digits[10] = { 0 };
+
+	for (int n = 0; text[n] != '.'; n++) ++digits[text[n] - 48];
+	int max = 0;
+
+	for (int n = 0; n < 10; ++n)
+	{
+		if (max < digits[n]) 
+		{
+			max = digits[n];
+			ch = n + 48;
+		}
+	}
+	cout << " Digit: " << ch << "; max: " << max << endl;
+	
+	system("pause");
+	
+	return 0;
+}*/
+
+
+#include <iostream> 
+#include <string> 
+using namespace std;
+int main()
+{
+	int i = 1;
+	if (i==1)
+	{
+		cout << "ti daun";
+}
+
+//B7
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	srand(unsigned(time(0)));
+	const int n = 10;
+	int a[n], b[2 * n], i;
+	for (i = 0; i < n; i++)
+	{
+		a[i] = rand() % 21 + 1;
+		cout << a[i] << ' ';
+	}
+	for (i = 0; i < 2*n; i++)
+	{
+		b[i] = a[i / 2];
+	}
+	cout << endl;
+	for (i = 0; i < 2*n; i++)
+	{
+		cout << b[i] << ' ';
+	}
+	system("pause");
+	return 0;
+}
+
+//B8
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+bool freePlace(int mas[], const int n)
+{
+	for (int i = 0; i < n; i++)
+		if (mas[i] == 0)
+			return true;
+	return false;
+}
+
+void printCoupon(int place, int salonType)
+{
+	cout << "Ваш посадочный талон: " << endl;
+	cout << "Ваше место № " << place << endl;
+	cout << (salonType == 1 ? "Салон курящих \n" : "Салон некурящих \n") << endl;
+
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "russian");
+	const int n = 10;
+	int a[n] = { 0 },place,salonType,k;
+
+	while (freePlace(a, n))
+	{
+		cout << " Введите, пожалуйста, 1 для \"курящих\" " << endl;
+		cout << " Введите, пожалуйста, 2 для \"некурящих\" " << endl;
+		cin >> salonType;
+		if (salonType == 1)
+		{
+			for (int i = 0; i < 5; i++)
+			{
+				if (a[i] == 0)
+				{
+					a[i] = 1;
+					printCoupon(i + 1, salonType);
+					break;
+				}
+
+				if (i == 4 && a[i] == 1)
+				{
+					cout << " Мест больше нет. Приемлем ли для вас салон для некурящих? \n 1-Да \n 2-Нет" << endl;
+					cin >> k;
+					if (k == 1)
+					
+						salonType = 2;
+					else cout << "Следующий полет состоится через 3 часа " << endl;
+					
+				}
+			}
+
+
+		}
+
+
+		if (salonType == 2)
+		{
+			for (int i = 5; i < n; i++)
+			{
+				if (a[i] == 0)
+				{
+					a[i] = 1;
+					printCoupon(i+1, salonType);
+					break;
+				}
+
+				if (i == 9 && a[i] == 1)
+					cout << "Следующий рейс через 3 часа " << endl;
+			}
+
+		}
+	}
+	cout << "Все рейсы заняты " << endl;
+
+
+
+		system("pause");
+	return 0;
+}
