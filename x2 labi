@@ -158,8 +158,8 @@ setlocale(LC_ALL, "russian");
 int m, n,helpNum,highest,lowest;
 double division;
 	
-cout << "Âåäèòå m "; cin >> m;
-cout << "Ââåäèòå n "; cin >> n;
+cout << "Введите m "; cin >> m;
+cout << "Введите n "; cin >> n;
 division =(double) m / n;
 helpNum = division * 10;
 	
@@ -167,18 +167,34 @@ highest = helpNum % 10;
 lowest = helpNum / 10 % 10;
 
 cout << "m/n= "<<division << endl;
-cout <<"Ñòàðøàÿ öèôðà äðîáíîé ÷àñòè "<< highest << endl;
-cout << "Ìëàäøàÿ öèôðà öåëîé ÷àñòè "<<lowest << endl;
-
-	
-
-
+cout <<"Старшая цифра дробной части: "<< highest << endl;
+cout << "Младшая цифра дробной части: "<<lowest << endl;
 
 system("pause");
 return 0;
 }
-/*
 
+//B2
+#include 
+#include 
+using namespace std;
+
+int main(){
+int number, a = 0;
+cout << "input number"; cin >> number;
+while (number % 10 == 0){
+number /= 10;
+}
+while (number != 0)
+{
+if (number % 10 == 0)
+a++;
+number /= 10;
+}
+cout << a << endl;
+system("pause");
+return 0;
+}
 
 PP2
 //A1
