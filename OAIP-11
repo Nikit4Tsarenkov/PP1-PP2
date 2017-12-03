@@ -1,0 +1,89 @@
+//A1
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int** enterMatrix(int& size) {
+
+	
+	int** outMatrix;
+	int i, j;
+	
+	cout << "enter matrix size" << endl;
+	cin >> size;
+	system("cls");
+	
+	outMatrix = new int* [size];
+	for (i = 0; i < size; i++) {
+		outMatrix[i] = new int[size];
+
+		for (j = 0; j < size; j++) {
+			cout << "enter element [" << i + 1 << ", " << j + 1 << "]:" << endl;
+			cin >> outMatrix[i][j];
+		}
+	}
+
+	return outMatrix;
+}
+
+void printMatrix(int** matrix, int size) {
+
+	system("cls");
+
+	for (int i = 0; i < size; i++) {
+		cout << "[ ";
+		for (int j = 0; j < size; j++) {
+
+				cout << matrix[i][j];
+
+				if (j < size - 1) {
+					cout << ", ";
+				}
+			}
+		cout << " ]" << endl;
+	}
+}
+
+int findMax(int** matrix, int size) {
+
+	int i, j;
+	int max = 0;
+
+
+	for (i = 0; i < size; i++) {
+		for (j = 0; j < size; j++) {
+
+			if (
+				(i < size / 2 && size - i > j && i - j < size / 2 - i - 1) ||
+				(i > size / 2 && size - i - 2 < j && i - j > size / 2 - i + 1)
+				)
+			{
+				matrix[i][j] = 0;
+				if (matrix[i][j] > max) {
+					max = matrix[i][j];
+				}
+			}
+
+		}
+
+	}
+	
+	return max;
+}
+
+int main() {
+
+	int** matrix;
+	int size;
+	int max;
+
+	matrix = enterMatrix(size);
+	printMatrix(matrix, size);
+	max = findMax(matrix, size);
+
+	cout << "Max number is: " << max << endl;
+
+	system("pause");
+
+	return 0;
+}
