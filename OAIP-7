@@ -1,0 +1,203 @@
+/*
+//A1(16)
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    float b;
+	for (b = 2.2; b > 0; ){
+		while (b <= 4.4)
+		{
+			cout << b << endl;
+			b=b+0.2;
+		}
+	}
+			system("pause");
+			return 0;
+		
+	}
+//A2
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+
+
+//А3(4)
+#include <iostream> 
+using namespace std;
+int main()
+{
+	int x, y, r;
+		cout << "Input arg x:"; cin >> x;
+		cout << "Input arg y:"; cin >> y;
+		cout << "Input arg r:"; cin >> r;
+		if (y
+
+
+	system("pause");
+	return 0;
+}
+
+
+//A4(6)
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	double sum = 1, i;
+	cout << "Input arg n="; cin >> n;
+
+	for (i = 2; i <= n; i++) {
+		sum += 1 / i;
+	}
+		cout << "The sum is:" << sum << endl;
+
+		system("pause");
+		return 0;
+	
+}
+
+//A5(16)
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int numberToSearch, b, i;
+	long sum = 0;
+	cout << "Input numberToSearch="; cin >> numberToSearch;
+	cout << "Input b="; cin >> b;
+	for (i = numberToSearch; i <= b; i++)
+		sum += i*i;
+	cout << "Sum of squares of integers from " << numberToSearch << " to " << b << " is " << sum << endl;
+	system("pause"); 
+	return 0;
+}
+//A6
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+//A7
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+
+//A8(7)
+#include <iostream>
+	using namespace std;
+	int main() {
+		int number, sum = 0, count = 1;
+		cout << "Input number: ";
+		cin >> number;
+		while (number != 0) {
+			sum += number % 10;
+			number /= 10;
+			count++;
+		}
+		cout << sum << endl;
+		system("pause");
+		return 0;
+	}
+	
+//A9(16)
+
+#include <iostream>
+using namespace std;
+
+int printMatrix(int** matrix) {
+
+	matrix[0] = 
+
+}
+
+int main() {
+	int NumberToSearch;
+	int firstMax = 0;
+	int secondMax = 0;
+	int i;
+	cout << "Input your number:"; cin >> NumberToSearch;
+	if (NumberToSearch < 100) {
+		cout << "number less than 100!"<< endl;
+	}
+
+	while (NumberToSearch > 0) {
+		i = NumberToSearch % 10;
+
+		if (firstMax < i) {
+			secondMax = firstMax;
+			firstMax = i;
+			NumberToSearch /= 10;
+			continue;
+		}
+
+		if (secondMax < i) {
+			secondMax = i;
+
+		}
+
+		NumberToSearch /= 10;
+	}
+
+
+	std::cout << firstMax << " " << secondMax << std::endl;
+	system("pause");
+	return 0;
+}
+
+
+//A10(16)
+
+#include <iostream> 
+using namespace std;
+int main()
+{
+	
+	int i, j, k;
+
+	for (i = 0; i < 8; i++)	{
+		k = 8 - i + (i / 2);
+		for (j = 0; j < (i + 2)/2; j++) {
+			cout << k << " ";
+		}
+		cout << endl;
+	}
+
+	system("pause");
+	return 0;
+}
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+
+	int number;
+	
+	cout << "enter number: ";
+	cin >> number;
+
+	while (number > 0) {
+		cout << number % 2;
+		number /= 2;
+	}
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
+*/
