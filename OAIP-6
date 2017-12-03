@@ -1,0 +1,307 @@
+/*
+//A1(3,4)
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+
+	system("pause");
+	return 0;
+}
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+system("pause");
+return 0;
+}
+
+
+//A2(4)
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	double x, y, R=15;
+	cout << "Input arg x:"; cin >> x;
+	cout << "Input arg y:"; cin >> y;
+	if (y >= 0 && y <= 15 && y >= fabs(x) && y*y >= ((15 * 15) - (x*x)))
+		cout << "true";
+	else
+		cout << "false";
+	system("pause");
+	return 0;
+}
+/*
+//A3(4,5)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int x, y;
+	cout << "Input x:"; cin >> x;
+	cout << "Input y:"; cin >> y;
+	if (x == 0)
+		cout << "on the axis OX" << endl;	
+	if (y == 0)
+		cout << "on the axis OY" << endl;
+	if (x > 0 && y > 0)	
+		cout << "in the first quarter" << endl;	
+	if (x < 0 && y > 0)	
+		cout << "in the second quarter" << endl;	
+	if (x < 0 && y < 0)	
+		cout << "in the third quarter" << endl;	
+	if (x > 0 && y < 0)	
+		cout << "in the fourth" << endl;	
+	system("pause");
+	return 0;
+}
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a, b, c, i = 0;
+	cout << "Input a:"; cin >> a;
+	cout << "Input b:"; cin >> b;
+	cout << "Input c:"; cin >> c;
+	if (a < 0)
+		i = 1;
+	if (b < 0)
+		i = i + 1;
+	if (c < 0)
+		i = i + 1;
+	cout <<"number of negative numbers are:" << i << endl;
+	system("pause");
+	return 0;
+}
+
+//A4(4)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	float f, x;
+	cout << "Input arg x:"; cin >> x;
+	if (x <= 1)
+		f = 0;
+	else
+		f = 1 / (x + 6);
+	cout << "f(" << x << ")=" << f << endl;
+	system("pause");
+	return 0;
+}
+
+
+//A5(5)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int y, x, R=3;
+	cout << "Input arg x:="; cin >> x;
+	y = -3; 
+	if (x >= -8 && x <= -5);
+	y = x + 3;
+	if (x >= 5 && x <= -3);
+	y = sqrt(pow(x, 2) - (x*x));
+	if (x > -3 && x <= 3);
+	y = ((3*x / 5) + 2);
+	if (x > 3 && x <= 8);
+	y = 3;
+	if (x > 8 && x <= 10);
+	cout << "f(" << x << ")=" << y;
+	system("pause");
+	return 0;
+}
+
+//A6(4)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double x, y;
+	cout << "Input x:"; cin >> x;
+	cout << "Input y:"; cin >> y;
+	if (y <= 0 && y >= -25 && y <= -fabs(x) && y*y <= ((25 * 25) - (x*x)))
+		cout << "Yes" << endl;
+	else
+		cout << "No" << endl;
+	system("pause");
+	return 0;
+}
+*/
+//A7(5,6)
+#include<iostream>
+
+
+
+
+/*
+//A8(7,8)
+#include <iostream>
+using namespace std;
+int main()
+{
+	int stars, places;
+	bool food;
+
+	cout << "How many stars do you want?" << endl;
+	cin >> stars;
+	cout << "How many places do you want?" << endl;
+	cin >> places;
+	cout << "WIth food? Enter 0 or 1" << endl;
+	cin >> food;
+	switch (stars)
+	{
+	case 5:
+		switch (places)
+		{
+		case 1: if (food == true) cout << "1500 per day"; else cout << "1000 per day"; break;
+		case 2: if (food == true) cout << "2500 per day"; else cout << "1500 per day"; break;
+
+		default: cout << "Error";
+			break;
+		}
+		break;
+	case 4:
+		switch (places)
+		{
+		case 1: if (food == true) cout << "900 per day"; else cout << "600 per day"; break;
+		case 2: if (food == true) cout << "1500 per day"; else cout << "900 per day"; break;
+		default: cout << "Error";
+			break;
+		}
+		break;
+	case 3:
+		switch (places)
+		{
+		case 1: if (food == true) cout << "500 per day"; else cout << "300 per day"; break;
+		case 2: if (food == true) cout << "800 per day"; else cout << "450 per day"; break;
+		default: cout << "Error";
+			break;
+		}
+		break;
+	default: cout << "We don't have so many places";
+		break;
+	}
+	system("pause");
+	return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main(){
+	int number, way, day;
+	cout << "Choose number of your destination: \n" << "1.Kyiv \n2.Kharkiv \n3.Donetsk\n4.Lviv\n" << "two-way flight?(Enter 1 or 2)" << endl << "In how many days flight will start?" << endl;
+	cin >> number >> way >> day;
+	if (day >= 45)
+	{
+		switch (number)
+		{
+		case 1:
+			switch (way)
+			{
+			case 1: cout << 500 * 0.8; break;
+			case 2: cout << 750 * 0.8; break;
+			}break;
+		case 2:
+			switch (way)
+			{
+			case 1: cout << 400 * 0.8; break;
+			case 2: cout << 600 * 0.8; break;
+			}break;
+		case 3:
+			switch (way)
+			{
+			case 1: cout << 350 * 0.8; break;
+			case 2: cout << 550 * 0.8; break;
+			}break;
+		case 4:
+			switch (way)
+			{
+			case 1: cout << 600 * 0.8; break;
+			case 2: cout << 900 * 0.8; break;
+			}break;
+		default:cout << "Error";
+			break;
+		}
+	}
+	else if (day >= 20 && day < 45)
+	{
+		switch (number)
+		{
+		case 1:
+			switch (way)
+			{
+			case 1: cout << 500 * 0.9; break;
+			case 2: cout << 750 * 0.9; break;
+			}break;
+		case 2:
+			switch (way)
+			{
+			case 1: cout << 400 * 0.9; break;
+			case 2: cout << 600 * 0.9; break;
+			}break;
+		case 3:
+			switch (way)
+			{
+			case 1: cout << 350 * 0.9; break;
+			case 2: cout << 550 * 0.9; break;
+			}break;
+		case 4:
+			switch (way)
+			{
+			case 1: cout << 600 * 0.9; break;
+			case 2: cout << 900 * 0.9; break;
+			}break;
+		default:cout << "Error";
+			break;
+		}
+
+	}
+	else
+		switch (number)
+	{
+		case 1:
+			switch (way)
+			{
+			case 1: cout << 500; break;
+			case 2: cout << 750; break;
+			}break;
+		case 2:
+			switch (way)
+			{
+			case 1: cout << 400; break;
+			case 2: cout << 600; break;
+			}break;
+		case 3:
+			switch (way)
+			{
+			case 1: cout << 350; break;
+			case 2: cout << 550; break;
+			}break;
+		case 4:
+			switch (way)
+			{
+			case 1: cout << 600; break;
+			case 2: cout << 900; break;
+			}break;
+		default:cout << "Error";
+			break;
+	}
+	system("pause");
+	return 0;
+}
+*/
