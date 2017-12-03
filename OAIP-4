@@ -1,0 +1,167 @@
+//A1(a)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double f, x;
+    cout << "Input x:"; cin >> x;
+    f = x*x*x + 2.5*x*x - 1.2;
+    cout << "f(" << x << ")=" << f << endl;
+    system("pause");
+    return 0;
+}
+//A1(b)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double f, x, y;
+    cout << "Input x:"; cin >> x;
+    cout << "Input y:"; cin >> y;
+    f = ((x + y) / (y + 1)) - ((x*y - 12) / (34 + x));
+
+    cout << "f ("<< x <<","<< y <<")="<< f << endl;
+    system("pause");
+    return 0;
+}
+//A1(c)
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double f, x, y;
+    cout << "Input x:"; cin >> x;
+    cout << "Input y:"; cin >> y;
+    f = ((x + y) / (y + 1)) - ((x*y - 12) / (34 + x));
+    cout <<" x=" <<x << endl;
+    cout << "y="<<y << endl;
+    cout << "f=" << f << endl;
+    system("pause");
+    return 0;
+}
+//A1(d)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    double f;
+    int x;
+    cout <<"Input arg x:"; cin >> x;
+    f=((22/x)+(22%x));
+    cout << "f(" << x << ")=" << f << endl;
+    system("pause");
+    return 0;
+}
+
+//A2(7)
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+   double x,y,z;
+   cout<<"Input arg x:"; cin >> x;
+   cout<<"Input arg y:"; cin >> y;
+   z=(pow(3,x)-(4*x)+(y-sqrt(x)*fabs(x)));
+   cout << "z(" << x << "," << y << ")=" << z << endl;
+   system("pause");
+   return 0;
+}
+
+//A3(1)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int b;
+	double z1, z2;
+	cout << "Input arg b:"; cin >> b;
+	z1 = (sqrt(2 * b + 2 * (sqrt(pow(b, 2) - 4)))) / ((sqrt(pow(b, 2) - 4)) + (b + 2));
+	z2 = 1 / sqrt(b + 2);
+	cout << "z1=" << z1 << endl;
+	cout << "z2=" << z2 << endl;
+	system("pause");
+	return 0;
+}
+
+//A4(1)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int c,a,b;
+	double perimeter, area;
+	cout <<"Input arg a:"; cin >> a;
+	cout <<"Input arg b:"; cin >> b;
+	cout <<"Input arg c:"; cin >> c;
+	perimeter = (a + c + b);
+	area = (a*b);
+	cout <<"perimetr=" << perimeter << endl;
+	cout <<"area=" << area << endl;
+	system("pause");
+	return 0;
+	}
+
+
+//A5(6)
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int a, b, d, n, f, e, number;
+	cout << "Enter three-digit number (10 <= n <= 999)" << endl; cin >> number;
+	a = number / 10;
+	b = a % 10;
+	d = number / 100;
+	f = d % 10;
+	e = number % 10;
+	n = b * 100 + f * 10 + e;
+	cout << n << endl;
+	system("pause");
+	return 0;
+}
+//A6(5)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a,b,c;
+	cout << "Input a:"; cin >> a;
+	b = a*a;
+	c = a*a*a;
+	a = c*c*b*a;
+	cout << "a^9=" << a << endl;
+	system("pause");
+	return 0;
+
+}
+
+
+//A7(4)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a, b, c, d, k;
+	cout << "Input a:"; cin >> a;
+	b = sqrt(a);
+	d = a*a*a*a*a*b;
+	cout << "a^5=" << d << endl;
+	c = a*a*a*a*a;
+	d = a*a;
+	k = c*c*c*d*a*a;
+	cout << "a^19=" << k << endl;
+	system("pause");
+	return 0;
+
+}
