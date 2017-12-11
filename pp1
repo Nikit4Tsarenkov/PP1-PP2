@@ -178,6 +178,22 @@ int main()
 	system("pause");
 	return 0;
 }
+//A10
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int a;
+  cin>>a;
+  a/=10;
+  a=a*(a+1);
+  a=(a*100)+25;
+  cout<<a<<endl;
+
+  system("pause");
+  return 0;
+}
 
 
 //B(1)
