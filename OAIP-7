@@ -33,24 +33,25 @@ int main()
 using namespace std;
 int main()
 {
-	int x, y, y1, r=15;
-		cout << "Input arg x:"; cin >> x;
-		cout << "Input arg y:"; cin >> y;
-                y1=sqrt(pow(r,2)-pow(x+15),2))+15;
-                if(x<=r && x>=-r && y<=r && y>=-r && y1<=y)
-             
-                cout<< "Hitted" << endl;
-else
-cout<< ""<< endl;
+	int x, y, y1, y2, r = 15;
+	cout << "Input arg x:"; cin >> x;
+	cout << "Input arg y:"; cin >> y;
+	y1 = sqrt((pow(r, 2) - pow((x + 15), 2))) + 15;
+
+	y2= sqrt((pow(r, 2) - pow((x - 15), 2))) - 15;
+		
+	if (x <= r && x >= -r && y <= r && y >= -r && y1 <= y && y2<=y)
+
+		cout << "Hitted " << endl;
+	else
+		cout << "Missed " << endl;
 
 
 	system("pause");
 	return 0;
+	
+
 }
-
-
-x=-15;y=15;
-(y-15)^2-(x+15)^2=r^2;
 
 
 
