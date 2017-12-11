@@ -616,29 +616,82 @@ using namespace std;
 int main()
 {
 	srand(unsigned(time(0)));
-	const int n = 10; int a[n];
-	 int l = n;
-	int i, k=0,j=0,imin;
-	cout << "Sourse array: ";
+	const int n = 10;
+	int a[n];
+	int i;
 	for (i = 0; i < n; i++)
 	{
 		a[i] = rand() % 10 + 1;
 		cout << a[i] << ' ';
 	}
 	cout << endl;
-	for (i = 0; i < n/2; i++)
+	for (i = 0; i < n; i++)
 	{
-		int tmp = a[i];
-		a[i] = a[n - i - 1];
-		a[n - i - 1] = tmp;
+		if (a[i] > a[i + 1] && a[i]>a[i - 1])
+
+			cout << a[i]<<' ';
+
 	}
 
-	for (i = 0; i < n;i++)
-		cout << a[i] << ' ';
+
+	system("pause");
+	return 0;
+
+
+
+}
+
+//A6
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int number = 1, count = 0, count1 = 0, previousNmb, count2 = 0, count3 = 0;/*count=kol-vo elementov ;	
+																					count1=sosednyiya para ;
+																					count2=vozrastaet ;
+																					count3=menyaetsya znak;*/
+	cout<<"input number"<<endl;
+	cin >> previousNmb;
+
+	while (number != 0)
+	{
+		
+		cin >> number;
+		if (number >= previousNmb)
+			count2++;
+
+		if (number == previousNmb)
+			count1++;
+
+		if ((number > 0 && previousNmb < 0) || (number < 0 && previousNmb>0))
+			count3++;
+		previousNmb = number;
+		count++;
+
+	}
+	
+	cout << "The seauence has " << count1 << " pair of neighboring elements \n";
+
+	cout << "Sign changes " << count3 << " times \n";
+
+	if (count2+1 == count)
+		cout << "The sequence increases \n";
+	else  cout << "The sequence decreases \n";
+	
 	
 	system("pause");
 	return 0;
 }
+
+
+
+
+
+
+
+
 
 //B5
 #include <iostream>
