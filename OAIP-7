@@ -28,20 +28,32 @@ int main()
 
 
 //А3(4)
-#include <iostream> 
+#include<iostream> 
+#include<cmath>
 using namespace std;
 int main()
 {
-	int x, y, r;
+	int x, y, r=15;
 		cout << "Input arg x:"; cin >> x;
 		cout << "Input arg y:"; cin >> y;
-		cout << "Input arg r:"; cin >> r;
-		if (y
+
+                if(x<=r && x>=-r && y<=r && y>=-r &&)
+             
+                cout<< "Hitted" << endl;
+else
+cout<< ""<< endl;
 
 
 	system("pause");
 	return 0;
 }
+
+
+x=-15;y=15;
+(y-15)^2-(x+15)^2=r^2;
+
+
+
 
 
 //A4(6)
