@@ -128,11 +128,6 @@ int main()
 
 #include <iostream>
 using namespace std;
-
-int printMatrix(int** matrix) {
-
-	matrix[0] = 
-
 }
 
 int main() {
@@ -164,7 +159,7 @@ int main() {
 	}
 
 
-	std::cout << firstMax << " " << secondMax << std::endl;
+	cout << firstMax << " " << secondMax << endl;
 	system("pause");
 	return 0;
 }
