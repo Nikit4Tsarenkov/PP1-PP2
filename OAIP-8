@@ -1,0 +1,106 @@
+//A1(7)
+#include <iostream>
+#include <cmath>
+using namespace std;
+int func(double a, double b) {
+	return (a + sin(b)) / (b + sin(a));
+}
+void main()
+{
+	int y;
+	y = func(1, 4) + func(7, 5) + func(3, 2);
+	cout << y << endl;
+	system("pause");
+}
+
+//A2(7)
+#include <iostream>
+#include <cmath>
+using namespace std;
+double f(double x);
+int main()
+{
+	double a;
+	double b;
+	double h;
+	cout << "Input granicy otrezka" << endl;
+	do
+	{
+		cout << "a= "; cin >> a;
+		cout << "b= "; cin >> b;
+		if (a > b) cout << "Error a should be < than b" << endl;
+	} while (a > b);
+	cout << "Input step: " << endl;
+	cout << "h= "; cin >> h;
+	for (double i = a; i <= b; i += h)
+		cout << "f(" << i << ")" << f(i) << endl;
+	system("pause");
+	return 0;
+}
+
+double f(double x)
+{
+	if (x < 0) return -4;
+	else if (x >= 0) return x*x;
+    return 2 ;
+}
+
+//A3(7)
+#include <iostream>
+#include <cmath>
+using namespace std;
+void rootCount(int a, int b, int c) {
+	int D = (b*b) - (4 * (a * c));
+	if (D > 0) 
+		cout << 2;
+	else if (D = 0)
+		cout << 1;
+	else
+		cout << 0;
+}
+ void main()
+{
+	int a, b, c;
+	float a1, b1, c1;
+	cout << "Input first koef: "; cin >> a;
+	cout << "Input second koef: "; cin >> b;
+	cout << "Input third koef: "; cin >> c;
+	cout << "Input veshest first koef: "; cin >> a1;
+	cout << "Input veshest second koef: "; cin >> b1;
+	cout << "Input veshest third koef: "; cin >> c1;
+	rootCount(a, b, c);
+	rootCount(a1, b1, c1);
+	system("pause");
+}
+
+ double rootCount(float a1, float b1, float c1) {
+	 float D = (b1*b1) - (4 * (a1 * c1));
+	 if (D > 0)
+		 return 2;
+	 else if (D = 0)
+		 return 1;
+	 else
+		 return 0;
+ }
+ 
+ //A4(7)
+ 
+ //A5(6)
+ #include <iostream>
+#include <cmath>
+using namespace std;
+
+int findBn(int b1, int q, int n)
+{
+	if (n == 1) return b1;
+	else return q*findBn(b1,q,n-1);
+
+}
+
+int main()
+{
+	cout << findBn(1, 2,5)<<endl;
+	system("pause");
+	return 0;
+}
+ 
